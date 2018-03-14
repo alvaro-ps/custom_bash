@@ -57,6 +57,8 @@ set incsearch
 set hlsearch
 ""For folding in JS
 set foldmethod=syntax
+"""For switching to another buffer without saving
+set hidden
 
 """"PLUGINS""""
 """For NERDTree

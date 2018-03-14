@@ -1,0 +1,107 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdTree' "Documents tree
+Plugin 'davidhalter/jedi-vim' "python autocompletion
+Plugin 'tpope/vim-fugitive' "git integration
+Plugin 'scrooloose/syntastic' "code syntaxis
+Plugin 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
+Plugin 'yggdroot/indentline' "Show indent lines (useful for loops)
+Plugin 'altercation/vim-colors-solarized' "Color scheme
+Plugin 'tmhedberg/SimpylFold' "Python folding
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ivanov/vim-ipython' "Integration with IPython
+Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
+Plugin 'ervandew/supertab' "<Tab> for code completion
+Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...
+Plugin 'SirVer/ultisnips'  "Autogenerate docstrings
+Plugin 'honza/vim-snippets'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let mapleader=" "
+inoremap jj <esc>
+vnoremap jj <esc>
+nnoremap z :bn<return>
+nnoremap <C-z> :bd<return>
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set expandtab
+set nu
+"For the transparent background
+"hi Normal ctermbg=none
+"highlight NonText ctermbg=none
+""Set the tab width (jedi screws it up)
+let s:tabwidth=4
+au Filetype * let &l:tabstop = s:tabwidth
+au Filetype * let &l:shiftwidth = s:tabwidth
+au Filetype * let &l:softtabstop = s:tabwidth
+au Filetype * set expandtab
+""For copying to the clipboard
+noremap <C-c> "+y
+noremap <C-v> "+p
+set clipboard=unnamedplus
+"""For incremental searching and highlighting
+set incsearch
+set hlsearch
+""For folding in JS
+set foldmethod=syntax
+
+""""PLUGINS""""
+"""For NERDTree
+nnoremap <C-n> :NERDTreeToggle<return>
+""For Jedi
+autocmd FileType python setlocal completeopt-=preview  "disable the documentation window (use K in normal mode to show documentation)
+""For syntastic (syntactic checker)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_python_checkers = ['pylint', 'pep8']
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': []}
+let g:syntastic_python_pep8_args = '--ignore="E111,E114"'
+let g:syntastic_python_pylint_args = '--disable="C0103,W0311"'
+"""For solarized
+syntax enable
+let g:solarized_termtrans = 1  "Allows transparent terminal
+"let g:solarized_termcolors = 256
+set background=dark
+colorscheme solarized
+""""For SympylFold
+nnoremap , za
+let g:SimpylFold_docstring_preview = 1  "See the first line of the fold
+let g:SimpylFold_fold_docstring = 0     "Do not fold docstrings (in functions for example
+let g:SimpylFold_fold_import = 0
+""For airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+nnoremap ² :bn<return>
+"""For JSON files (apparently it is already installed)
+let g:vim_json_syntax_conceal = 0
+"""For supertab
+let g:SuperTabDefaultCompletionType = "context"      "For completing code as well as paths
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"  "For using omnicompletion (needed for working properly with jedivim)
+
+"""autopep
+let g:pyflakes_use_quickfix=0
+
+let g:autopep8_indent_size=2
+let g:autopep8_max_line_length=79
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"

@@ -12,5 +12,6 @@ stty stop undef # to unmap ctrl-s (for vim-ipython)
 export TERM=xterm-256color #(256 colors in the terminal, for solarized)
 
 basepath=$(dirname ${BASH_SOURCE[0]})
+ln -f $basepath"/.vimrc" ~/.vimrc
 source $basepath"/aliases.sh"
 source $basepath"/fasd.sh"

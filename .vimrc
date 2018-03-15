@@ -19,7 +19,6 @@ Plugin 'altercation/vim-colors-solarized' "Color scheme
 Plugin 'tmhedberg/SimpylFold' "Python folding
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ivanov/vim-ipython' "Integration with IPython
 Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plugin 'ervandew/supertab' "<Tab> for code completion
 Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...

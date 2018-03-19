@@ -22,8 +22,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plugin 'ervandew/supertab' "<Tab> for code completion
 Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...
-Plugin 'SirVer/ultisnips'  "Autogenerate docstrings
-Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -98,11 +96,3 @@ let g:vim_json_syntax_conceal = 0
 """For supertab
 let g:SuperTabDefaultCompletionType = "context"      "For completing code as well as paths
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"  "For using omnicompletion (needed for working properly with jedivim)
-
-"""autopep
-let g:pyflakes_use_quickfix=0
-
-let g:autopep8_indent_size=2
-let g:autopep8_max_line_length=79
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"

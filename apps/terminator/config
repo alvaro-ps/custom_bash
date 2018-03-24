@@ -8,8 +8,8 @@
   layout_launcher = <Primary><Shift>l
   new_tab = <Alt>t
   new_window = <Primary><Shift>t
-  next_tab = <Primary>Right
-  prev_tab = <Primary>Left
+  next_tab = <Primary>l
+  prev_tab = <Primary>h
   resize_down = <Primary><Shift>j
   resize_left = <Primary><Shift>h
   resize_right = <Primary><Shift>l

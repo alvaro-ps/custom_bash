@@ -8,6 +8,7 @@
   layout_launcher = <Primary><Shift>l
   new_tab = <Alt>t
   new_window = <Primary><Shift>t
+  next_profile = <Primary>p
   next_tab = <Primary>l
   prev_tab = <Primary>h
   resize_down = <Primary><Shift>j

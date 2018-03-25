@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plugin 'ervandew/supertab' "<Tab> for code completion
 Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...
+Plugin 'ctrlpvim/ctrlp.vim'    "Finder for vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required

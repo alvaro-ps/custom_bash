@@ -237,5 +237,5 @@ exec --no-startup-id nm-applet
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 5s && kalu"
 
-exec_always eval "$(ssh-agent -s)"
-exec_always ssh-add ~/.ssh/github
+exec_always 'eval "$(ssh-agent -s)"'
+exec_always 'ssh-add ~/.ssh/github'

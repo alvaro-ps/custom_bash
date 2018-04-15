@@ -23,6 +23,7 @@ Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plugin 'ervandew/supertab' "<Tab> for code completion
 Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...
 Plugin 'ctrlpvim/ctrlp.vim'    "Finder for vim
+Plugin 'rust-lang/rust.vim' "Rust
 
 call vundle#end()            " required
 filetype plugin indent on    " required

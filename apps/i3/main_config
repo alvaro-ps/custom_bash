@@ -120,7 +120,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # activate HDMI screen if present
-exec xrandr | grep 'HDMI1 connected' && xrandr --output eDP1 --auto --output HDMI1 --auto --left-of eDP1
+exec xrandr | grep 'HDMI1 connected' && xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1
 # Put workspaces in screens
 workspace 1 output eDP1
 workspace 2 output HDMI1

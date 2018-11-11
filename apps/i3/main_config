@@ -96,7 +96,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace10 "Music"
+set $workspace10 " Music"
+set $workspace3 " Mail"
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -136,7 +137,8 @@ workspace 9 output eDP1
 workspace $workspace10 output eDP1
 
 #open Spotify in the Music workspace
-assign [class="^Spotify$"] workspace10
+for_window [class="^Spotify$"] move container to workspace $workspace10
+assign [class="^Thunderbird$"] $workspace3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

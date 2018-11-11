@@ -101,7 +101,7 @@ set $workspace3 " Mail"
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -113,7 +113,7 @@ bindsym $mod+0 workspace $workspace10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -127,7 +127,7 @@ exec xrandr | grep 'HDMI1 connected' && xrandr --output eDP1 --auto --output HDM
 # Put workspaces in screens
 workspace 1 output eDP1
 workspace 2 output HDMI1
-workspace 3 output eDP1
+workspace $workspace3 output eDP1
 workspace 4 output HDMI1
 workspace 5 output eDP1
 workspace 6 output HDMI1
@@ -136,7 +136,7 @@ workspace 8 output HDMI1
 workspace 9 output eDP1
 workspace $workspace10 output eDP1
 
-#open Spotify in the Music workspace
+#open apps in their workspaces
 for_window [class="^Spotify$"] move container to workspace $workspace10
 assign [class="^Thunderbird$"] $workspace3
 

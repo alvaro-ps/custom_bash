@@ -1,0 +1,1 @@
+yaourt -S polybar-git

@@ -21,6 +21,7 @@ alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
+monitor = "eDP1"
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -47,9 +48,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = date filesystem bspwm i3 
+modules-left = filesystem i3 
 ;modules-center = titlehook
-modules-right = xbacklight volume xkeyboard memory cpu battery temperature  powermenu
+modules-right = xbacklight bspwm volume xkeyboard memory cpu battery temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -100,7 +101,7 @@ initial = 1
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = "Keyboard: "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -117,6 +118,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+mount-1 = /home/alvaro
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -148,7 +150,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000

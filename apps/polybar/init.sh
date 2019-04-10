@@ -6,4 +6,4 @@
 wd=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 ln -f $wd"/config" ~/.config/polybar/config
 
-source $wd"/displaytitle"
+#source $wd"/displaytitle"

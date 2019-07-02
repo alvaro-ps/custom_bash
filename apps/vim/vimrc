@@ -33,8 +33,8 @@ inoremap jj <esc>
 vnoremap jj <esc>
 nnoremap z :bn<return>
 nnoremap <C-z> :bd<return>
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set autoindent
 set expandtab
 set nu
@@ -42,14 +42,14 @@ set nu
 "hi Normal ctermbg=none
 "highlight NonText ctermbg=none
 ""Set the tab width (jedi screws it up)
-let s:tabwidth=4
+let s:tabwidth=2
 au Filetype * let &l:tabstop = s:tabwidth
 au Filetype * let &l:shiftwidth = s:tabwidth
 au Filetype * let &l:softtabstop = s:tabwidth
 au Filetype * set expandtab
 ""For copying to the clipboard
-noremap <C-c> "+y
-noremap <C-v> "+p
+"noremap <C-c> "+y
+"noremap <C-v> "+p
 set clipboard=unnamedplus
 """For incremental searching and highlighting
 set incsearch

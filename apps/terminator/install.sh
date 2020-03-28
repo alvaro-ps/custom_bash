@@ -1,1 +1,1 @@
-pacman -S terminator
+sudo pacman -S terminator

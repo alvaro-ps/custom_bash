@@ -1,1 +1,1 @@
-pacman -S fasd
+sudo pacman -S fasd

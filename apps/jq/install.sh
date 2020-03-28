@@ -1,1 +1,1 @@
-pacman -S jq
+sudo pacman -S jq

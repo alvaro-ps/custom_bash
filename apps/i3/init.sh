@@ -1,5 +1,7 @@
 wd=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
+mkdir -p ~/.config/i3
 ln -f $wd"/main_config" ~/.config/i3/config
+mkdir -p ~/.config/i3blocks
 ln -f $wd"/i3blocks.conf" ~/.config/i3blocks/i3blocks.conf
 
 # SSH agent

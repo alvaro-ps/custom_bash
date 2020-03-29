@@ -215,9 +215,7 @@ bar {
 }
 
 # floating windows
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Kalu"] floating enable
-for_window [class="Yad"] floating enable
+for_window [class="Pamac"] floating enable
 
 
 # Multimedia Keys

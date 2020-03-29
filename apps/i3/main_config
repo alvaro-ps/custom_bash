@@ -216,7 +216,7 @@ bar {
 
 # floating windows
 for_window [class="Pamac"] floating enable
-
+for_window [class="Yad"] floating enable # calendar floating
 
 # Multimedia Keys
 

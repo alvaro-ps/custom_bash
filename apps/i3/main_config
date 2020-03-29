@@ -98,7 +98,7 @@ set $workspace3 "03   Mail"
 set $workspace4 "04    Adops"
 set $workspace6 "06    Extra"
 set $workspace8 "08  Personal"
-set $workspace10 "10  Music"
+set $workspace10 "10  Music"
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2

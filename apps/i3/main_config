@@ -92,13 +92,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "01  Browser"
-set $workspace2 "02   Development"
-set $workspace3 "03   Mail"
-set $workspace4 "04    Adops"
-set $workspace6 "06    Extra"
-set $workspace8 "08  Personal"
-set $workspace10 "10  Music"
+set $workspace1 "01 "
+set $workspace2 "02  "
+set $workspace3 "03  "
+set $workspace4 "04  "
+set $workspace6 "06  "
+set $workspace8 "08 "
+set $workspace10 "10 "
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2

@@ -141,7 +141,7 @@ workspace $workspace10 output $laptop
 
 #open apps in their workspaces
 for_window [class="^Spotify$"] move container to workspace $workspace10
-assign [class="^Thunderbird$"] $workspace3
+for_window [class="^Thunderbird$"] move container to workspace $workspace3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

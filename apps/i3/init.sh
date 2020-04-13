@@ -4,7 +4,9 @@ ln -f $wd"/main_config" ~/.config/i3/config
 mkdir -p ~/.config/i3blocks
 ln -f $wd"/i3blocks.conf" ~/.config/i3blocks/i3blocks.conf
 
-ln -fs $wd"/backgrounds/" ~/Pictures/
+if [ ! -d ~/Pictures/backgrounds/ ]; then
+    ln -s $wd"/backgrounds/" ~/Pictures/
+fi
 
 # SSH agent
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)

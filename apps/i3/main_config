@@ -254,6 +254,6 @@ bindsym $mod+s exec "/usr/bin/gnome-screenshot -i"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
-exec --no-startup-id "nitrogen ~/Pictures/backgrounds/ --random --set-auto --head=0"
-exec --no-startup-id "nitrogen ~/Pictures/backgrounds/ --random --set-auto --head=1"
+exec --no-startup-id "nitrogen ~/Pictures/backgrounds/ --random --set-scaled --head=0"
+exec --no-startup-id "nitrogen ~/Pictures/backgrounds/ --random --set-scaled --head=1"
 exec --no-startup-id "pamac-tray"

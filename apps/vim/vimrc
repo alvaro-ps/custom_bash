@@ -70,14 +70,13 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_python_checkers = ['pylint', 'pep8']
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = '--disable="C0103" --indent-string="  " --indent-after-paren=2'
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': []}
-let g:syntastic_python_pep8_args = '--ignore="E111,E114"'
-let g:syntastic_python_pylint_args = '--disable="C0103,W0311"'
 """For solarized
 syntax enable
 let g:solarized_termtrans = 1  "Allows transparent terminal

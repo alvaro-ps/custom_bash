@@ -1,32 +1,28 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"Automatic installation of vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdTree' "Documents tree
-Plugin 'davidhalter/jedi-vim' "python autocompletion
-Plugin 'tpope/vim-fugitive' "git integration
-Plugin 'scrooloose/syntastic' "code syntaxis
-Plugin 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
-Plugin 'yggdroot/indentline' "Show indent lines (useful for loops)
-Plugin 'altercation/vim-colors-solarized' "Color scheme
-Plugin 'tmhedberg/SimpylFold' "Python folding
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'easymotion/vim-easymotion' "simpler way to use some motions in vim
-Plugin 'ervandew/supertab' "<Tab> for code completion
-Plugin 'tmhedberg/matchit' "extension of % for HTM, latex, ...
-Plugin 'ctrlpvim/ctrlp.vim'    "Finder for vim
-Plugin 'derekwyatt/vim-scala' "Scala
+Plug 'scrooloose/nerdTree' "Documents tree
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompletion 
+Plug 'tpope/vim-fugitive' "git integration
+Plug 'scrooloose/syntastic' "code syntaxis
+Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
+Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
+Plug 'altercation/vim-colors-solarized' "Color scheme
+Plug 'tmhedberg/SimpylFold' "Python folding
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion' "simpler way to use some motions in vim
+Plug 'tmhedberg/matchit' "extension of % for HTM, latex, ...
+Plug 'ctrlpvim/ctrlp.vim'    "Finder for vim
+Plug 'derekwyatt/vim-scala' "Scala
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 let mapleader=" "
 inoremap jj <esc>
@@ -54,16 +50,39 @@ set clipboard=unnamedplus
 """For incremental searching and highlighting
 set incsearch
 set hlsearch
-""For folding in JS
-set foldmethod=syntax
 """For switching to another buffer without saving
 set hidden
 
 """"PLUGINS""""
 """For NERDTree
 nnoremap <C-n> :NERDTreeToggle<return>
-""For Jedi
-autocmd FileType python setlocal completeopt-=preview  "disable the documentation window (use K in normal mode to show documentation)
+""coc autocompletion
+let g:coc_global_extensions = ['coc-python', 'coc-metals']
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+" Use K to either doHover or show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" GoTo code navigation.
+nmap <silent> <Leader>d <Plug>(coc-definition)
+
 ""For syntastic (syntactic checker)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -81,7 +100,6 @@ let g:syntastic_python_pylint_args = '--disable="C0103,W0311"'
 """For solarized
 syntax enable
 let g:solarized_termtrans = 1  "Allows transparent terminal
-"let g:solarized_termcolors = 256
 set background=dark
 colorscheme solarized
 """"For SympylFold
@@ -95,6 +113,3 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap ² :bn<return>
 """For JSON files (apparently it is already installed)
 let g:vim_json_syntax_conceal = 0
-"""For supertab
-let g:SuperTabDefaultCompletionType = "context"      "For completing code as well as paths
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"  "For using omnicompletion (needed for working properly with jedivim)

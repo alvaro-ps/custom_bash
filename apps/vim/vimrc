@@ -29,8 +29,8 @@ inoremap jj <esc>
 vnoremap jj <esc>
 nnoremap z :bn<return>
 nnoremap <C-z> :bd<return>
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set autoindent
 set expandtab
 set nu
@@ -40,7 +40,7 @@ set foldmethod=syntax "fold curly braces
 "hi Normal ctermbg=none
 "highlight NonText ctermbg=none
 ""Set the tab width (jedi screws it up)
-let s:tabwidth=2
+let s:tabwidth=4
 au Filetype * let &l:tabstop = s:tabwidth
 au Filetype * let &l:shiftwidth = s:tabwidth
 au Filetype * let &l:softtabstop = s:tabwidth

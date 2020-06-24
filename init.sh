@@ -7,3 +7,4 @@ bind '"\e[6~":history-search-forward'
 bind 'set completion-ignore-case on'
 #(256 colors in the terminal, for solarized)
 export TERM=xterm-256color 
+export EDITOR=vim

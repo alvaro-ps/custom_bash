@@ -1,22 +1,49 @@
 [global_config]
   always_split_with_profile = True
 [keybindings]
+  new_tab = <Alt>t
+  go_up = <Alt>k
   go_down = <Alt>j
   go_left = <Alt>h
   go_right = <Alt>l
-  go_up = <Alt>k
-  layout_launcher = <Primary><Shift>l
-  new_tab = <Alt>t
-  new_window = <Primary><Shift>t
-  next_profile = <Alt>p
-  next_tab = <Primary>l
-  prev_tab = <Primary>h
+  split_horiz = <Alt>o
+  split_vert = <Alt>e
+  resize_up = <Primary><Shift>k
   resize_down = <Primary><Shift>j
   resize_left = <Primary><Shift>h
   resize_right = <Primary><Shift>l
-  resize_up = <Primary><Shift>k
-  split_horiz = <Alt>o
-  split_vert = <Alt>e
+  next_tab = <Primary>l
+  prev_tab = <Primary>h
+  new_window = <Primary><Shift>t
+  layout_launcher = <Primary><Shift>l
+  next_profile = <Alt>p
+[profiles]
+  [[default]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Monospace Bold Semi-Condensed 11
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[transparent]]
+    icon_bell = False
+    background_color = "#002b36"
+    background_darkness = 0.7
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Monospace 9
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -26,29 +53,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#002b36"
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = Source Code Pro Semi-Bold 11
-    foreground_color = "#839496"
-    icon_bell = False
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[transparent]]
-    background_color = "#002b36"
-    background_darkness = 0.7
-    background_type = transparent
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = Monospace 9
-    foreground_color = "#839496"
-    icon_bell = False
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False

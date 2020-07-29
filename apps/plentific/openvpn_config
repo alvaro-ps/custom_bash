@@ -1,0 +1,10 @@
+Someone on the devops team should give you a file certificates for the VPN.
+You should place this file under `/etc/openvpn/` (it requires superuser permissions), and name it, 
+for instance, `plentific.conf`. Then, modify the file `/etc/default/openvpn` to include 
+`AUTOSTART="plentific"` (This "plentific" will make openvpn use the `plentific.conf` file we just
+saved). In order to activate these changes, the systemctl daemon must be reloaded
+(`sudo systemctl daemon-reload`)
+
+Then, in order to enable the openvpn service to automatically start, run `sudo systemctl enable 
+openvpn@plentific.service`. If you named your file differently the service name will differ, just
+use the autocompletion functionality.

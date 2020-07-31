@@ -23,7 +23,6 @@ hide_edge_borders both
 # no titlebar
 for_window [class="^.*"] border pixel 1
 gaps inner 10
-gaps outer 0
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -125,10 +124,13 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-set $laptop "eDP1"
-set $screen "HDMI1"
+# These variable names should be checked first by using xrandr
+set $laptop "eDP-1-1"
+set $screen "HDMI-0"
+
+exec xrandr --output $laptop --auto
 # activate HDMI screen if present
-exec xrandr | grep 'HDMI1 connected' && xrandr --output $laptop --auto --output $screen --auto --right-of $laptop
+exec xrandr | grep 'HDMI.* connected' && xrandr --output $screen --auto --right-of $laptop
 # Put workspaces in screens
 workspace $workspace1 output $laptop
 workspace $workspace2 output $screen
@@ -245,7 +247,8 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/firefox"
+bindsym $mod+w exec "chromium" 
+# "/usr/bin/firefox"
 bindsym $mod+n exec "/usr/bin/nautilus"
 bindsym $mod+m exec "/usr/bin/spotify"
 bindsym $mod+s exec "/usr/bin/gnome-screenshot -i"

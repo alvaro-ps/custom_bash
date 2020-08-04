@@ -127,10 +127,11 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # These variable names should be checked first by using xrandr
 set $laptop "eDP-1-1"
 set $screen "HDMI-0"
+set $mode 1920x1080 # The mode is fixed to the minimum of both laptop and external screen
 
-exec xrandr --output $laptop --auto
+exec xrandr --output $laptop --mode $mode --dpi 192
 # activate HDMI screen if present
-exec xrandr | grep 'HDMI.* connected' && xrandr --output $screen --auto --right-of $laptop
+exec xrandr | grep 'HDMI.* connected' && xrandr --output $screen --right-of $laptop --mode $mode --dpi 192
 # Put workspaces in screens
 workspace $workspace1 output $laptop
 workspace $workspace2 output $screen

@@ -2,7 +2,7 @@ in case the font is too small, it may have to do with a high resolution screen, 
 paste this into ~/.Xresources
 
 
-Xft.dpi: 192
+Xft.dpi: 96
 
 ! These might also be useful depending on your monitor and personal preference:
 Xft.autohint: 0

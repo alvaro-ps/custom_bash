@@ -23,7 +23,7 @@
     icon_bell = False
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = Monospace Bold Semi-Condensed 11
+    font = Monospace 11
     foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden

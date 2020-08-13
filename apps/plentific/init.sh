@@ -10,3 +10,7 @@ export PLENTIFIC_WORKSPACE_ROOT=$HOME/plentific/workspaces/
 source /home/alvaro/plentific/docker-ide-workspace/cli_bashcompletion.sh
 
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-common/
+export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-upload/
+
+#kubectx and kubens
+export PATH=~/.kubectx:$PATH

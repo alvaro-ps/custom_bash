@@ -13,6 +13,7 @@ export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-common/
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-upload/
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-locations/
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentifone/
+export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/emails-python-client/
 
 #kubectx and kubens
 export PATH=~/.kubectx:$PATH

@@ -11,6 +11,8 @@ source /home/alvaro/plentific/docker-ide-workspace/cli_bashcompletion.sh
 
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-common/
 export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-upload/
+export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentific-locations/
+export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/plentifone/
 
 #kubectx and kubens
 export PATH=~/.kubectx:$PATH

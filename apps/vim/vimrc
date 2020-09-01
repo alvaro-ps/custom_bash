@@ -27,8 +27,9 @@ call plug#end()
 let mapleader=" "
 inoremap jj <esc>
 vnoremap jj <esc>
-nnoremap z :bn<return>
-nnoremap <C-z> :bd<return>
+nnoremap z :bnext<return>
+nnoremap Z :bprevious<return>
+nnoremap <C-z> :bdelete<return>
 set tabstop=4
 set shiftwidth=4
 set autoindent

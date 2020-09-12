@@ -98,6 +98,7 @@ set $workspace2 "02  "
 set $workspace3 "03  "
 set $workspace4 "04  "
 set $workspace6 "06  "
+set $workspace7 "7 "
 set $workspace8 "08 "
 set $workspace10 "10 "
 # switch to workspace
@@ -107,7 +108,7 @@ bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace 7
+bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace $workspace10
@@ -119,7 +120,7 @@ bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
@@ -139,7 +140,7 @@ workspace $workspace3 output $laptop
 workspace $workspace4 output $screen
 workspace 5 output $laptop
 workspace $workspace6 output $screen
-workspace 7 output $laptop
+workspace $workspace7 output $laptop
 workspace $workspace8 output $screen
 workspace 9 output $laptop
 workspace $workspace10 output $laptop
@@ -148,6 +149,7 @@ workspace $workspace10 output $laptop
 for_window [class="^Spotify$"] move container to workspace $workspace10
 for_window [class="^Thunderbird$"] move container to workspace $workspace3
 for_window [class="^Slack$"] move container to workspace $workspace3
+for_window [class="^Firefox$"] move container to workspace $workspace7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

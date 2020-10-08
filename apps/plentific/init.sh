@@ -17,3 +17,13 @@ export PYTHONPATH=$PYTHONPATH:/home/alvaro/plentific/emails-python-client/
 
 #kubectx and kubens
 export PATH=~/.kubectx:$PATH
+alias eks_token=". ~/plentific/workspaces/master/infrastructure/tools/sts"
+
+export PLENTIFIC_NAMESPACE="uk"
+
+go_pod () {
+    # bash shell in the web pod given by service name
+    SERVICE_NAME=$1
+    POD_NAME=$(kubectl get pods -o name | grep "$1.*web")
+    kubectl exec --stdin --tty $POD_NAME -- /bin/bash
+}

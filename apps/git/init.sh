@@ -8,3 +8,4 @@ GIT_PROMPT_THEME=Solarized
 source ~/.bash-git-prompt/gitprompt.sh
 alias push='br=$(git branch | grep \* | cut -d " " -f2); git push origin $br'
 alias pull='br=$(git branch | grep \* | cut -d " " -f2); git pull origin $br'
+alias commit='commit=$(git commit -m $1); commit $1'

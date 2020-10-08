@@ -21,6 +21,8 @@ Plug 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plug 'tmhedberg/matchit' "extension of % for HTM, latex, ...
 Plug 'ctrlpvim/ctrlp.vim'    "Finder for vim
 Plug 'derekwyatt/vim-scala' "Scala
+Plug 'leafgarland/typescript-vim' "Typescript
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 

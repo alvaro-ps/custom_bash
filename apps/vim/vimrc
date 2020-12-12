@@ -20,9 +20,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion' "simpler way to use some motions in vim
 Plug 'tmhedberg/matchit' "extension of % for HTM, latex, ...
 Plug 'ctrlpvim/ctrlp.vim'    "Finder for vim
+Plug 'idbrii/vim-notgrep'   "ack in vim
 Plug 'derekwyatt/vim-scala' "Scala
 Plug 'leafgarland/typescript-vim' "Typescript
 Plug 'peitalin/vim-jsx-typescript'
+
 
 call plug#end()
 
@@ -97,6 +99,7 @@ set statusline+=%*
 let g:syntastic_python_checkers = ['pylint', 'pep8']
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+nnoremap <silent> <Leader>s :SyntasticToggleMode<return> 
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': []}
@@ -118,3 +121,7 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap ² :bn<return>
 """For JSON files (apparently it is already installed)
 let g:vim_json_syntax_conceal = 0
+"""notgrep
+""" grep the contents of the clipboard
+nnoremap <silent> <Leader>g :NotGrep <C-R>"<return> 
+nnoremap <Leader>gi :NotGrep -i 

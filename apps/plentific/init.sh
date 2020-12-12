@@ -27,3 +27,6 @@ go_pod () {
     POD_NAME=$(kubectl get pods -o name | grep "$1.*web")
     kubectl exec --stdin --tty $POD_NAME -- /bin/bash
 }
+
+# env vars for plentestic
+export $(xargs <~/.plentestic)

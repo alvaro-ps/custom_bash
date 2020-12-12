@@ -8,3 +8,17 @@ bind 'set completion-ignore-case on'
 #(256 colors in the terminal, for solarized)
 export TERM=xterm-256color 
 export EDITOR=vim
+
+replace() {
+    # Replace some text with 
+    CURRENT_TEXT=$1
+    NEW_TEXT=$2
+    echo "Replacing $CURRENT_TEXT with $NEW_TEXT in the following files:"
+    for file in `ack $CURRENT_TEXT -l`
+    do
+        echo "- $file"
+        sed -i  "s/$CURRENT_TEXT/$NEW_TEXT/g" $file
+    done
+    echo "Done!"
+}
+

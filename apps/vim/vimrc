@@ -89,6 +89,7 @@ endfunction
 
 " GoTo code navigation.
 nmap <silent> <Leader>d <Plug>(coc-definition)
+nmap <silent> <Leader>r <Plug>(coc-references)
 
 ""For syntastic (syntactic checker)
 set statusline+=%#warningmsg#
@@ -107,7 +108,7 @@ let g:syntastic_python_pep8_args = '--ignore="E111,E114"'
 let g:syntastic_python_pylint_args = '--disable="C0103,W0311"'
 """For solarized
 syntax enable
-let g:solarized_termtrans = 1  "Allows transparent terminal
+"let g:solarized_termtrans = 1  "Allows transparent terminal
 set background=dark
 colorscheme solarized
 """"For SympylFold

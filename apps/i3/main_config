@@ -149,6 +149,7 @@ workspace $workspace10 output $laptop
 for_window [class="^Spotify$"] move container to workspace $workspace10
 for_window [class="^Thunderbird$"] move container to workspace $workspace3
 for_window [class="^Slack$"] move container to workspace $workspace3
+for_window [class="^google-chrome$"] move container to workspace $workspace7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -252,9 +253,9 @@ bindsym $mod+F8 exec mocp --next
 # App shortcuts
 bindsym $mod+w exec "chromium" 
 # "/usr/bin/firefox"
-bindsym $mod+n exec "/usr/bin/nautilus"
-bindsym $mod+m exec "/usr/bin/spotify"
-bindsym $mod+s exec "/usr/bin/gnome-screenshot -i"
+bindsym $mod+n exec "nautilus"
+bindsym $mod+m exec "spotify"
+bindsym $mod+s exec "gnome-screenshot -i"
 bindsym $mod+c exec "gnome-calendar"
 
 # Redirect sound to headphones

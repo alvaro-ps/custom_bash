@@ -124,5 +124,5 @@ nnoremap ² :bn<return>
 let g:vim_json_syntax_conceal = 0
 """notgrep
 """ grep the contents of the clipboard
-nnoremap <silent> <Leader>g :NotGrep <C-R>"<return> 
-nnoremap <Leader>gi :NotGrep -i 
+nnoremap <silent> <Leader>f :NotGrep <C-R>"<return>
+nnoremap <Leader>fi :NotGrep -i

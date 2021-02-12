@@ -39,6 +39,7 @@ set shiftwidth=4
 set autoindent
 set expandtab
 set nu
+set colorcolumn=90
 
 set foldmethod=syntax "fold curly braces
 "For the transparent background

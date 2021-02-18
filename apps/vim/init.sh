@@ -11,5 +11,8 @@ vck () {
         echo "No files matching '$REGEX'"
         return
     fi
-    echo $FILES_MATCHING_REGEX | xargs -o vim +/$REGEX
+    # remove trailing slashes from the regex that will be passed to VIM, as it does not
+    # need them
+    VIM_REGEX=$(echo $REGEX | tr -d '\\')
+    echo $FILES_MATCHING_REGEX | xargs -o vim +/$VIM_REGEX
 }

@@ -149,7 +149,7 @@ workspace $workspace10 output $laptop
 for_window [class="^Spotify$"] move container to workspace $workspace10
 for_window [class="^Thunderbird$"] move container to workspace $workspace3
 for_window [class="^Slack$"] move container to workspace $workspace3
-for_window [class="^google-chrome$"] move container to workspace $workspace7
+for_window [class="^Google-chrome$"] move container to workspace $workspace7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

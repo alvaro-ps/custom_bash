@@ -5,8 +5,9 @@ ln -f $basepath"/vimrc" ~/.vimrc
 vck () {
     # open files that match the given regex
     REGEX=$1
+    DIRECTORY=$2
 
-    FILES_MATCHING_REGEX=$(ack -l $REGEX)
+    FILES_MATCHING_REGEX=$(ack -l $REGEX $DIRECTORY)
     if [ -z "$FILES_MATCHING_REGEX" ]; then
         echo "No files matching '$REGEX'"
         return

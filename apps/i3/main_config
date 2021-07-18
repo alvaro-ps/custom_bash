@@ -20,6 +20,8 @@ font $font
 #thin borders
 hide_edge_borders both
 
+workspace_auto_back_and_forth yes
+
 # no titlebar
 for_window [class="^.*"] border pixel 1
 gaps inner 10
@@ -149,7 +151,6 @@ workspace $workspace10 output $laptop
 for_window [class="^Spotify$"] move container to workspace $workspace10
 for_window [class="^Thunderbird$"] move container to workspace $workspace3
 for_window [class="^Slack$"] move container to workspace $workspace3
-for_window [class="^Google-chrome$"] move container to workspace $workspace7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -251,7 +252,7 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "chromium" 
+bindsym $mod+w exec "google-chrome" 
 # "/usr/bin/firefox"
 bindsym $mod+n exec "nautilus"
 bindsym $mod+m exec "spotify"

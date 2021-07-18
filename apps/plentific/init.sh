@@ -45,6 +45,3 @@ ksetctx () {
     fi
     kubectx $CLUSTER_URI
 }
-
-# env vars for plentestic
-export $(xargs <~/.plentestic)

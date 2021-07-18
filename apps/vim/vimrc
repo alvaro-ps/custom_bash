@@ -14,7 +14,8 @@ Plug 'scrooloose/syntastic' "code syntaxis
 Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
 Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
 Plug 'altercation/vim-colors-solarized' "Color scheme
-Plug 'tmhedberg/SimpylFold' "Python folding
+"Plug 'tmhedberg/SimpylFold' "Python folding
+Plug 'pseewald/vim-anyfold' "code folding
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion' "simpler way to use some motions in vim
@@ -24,6 +25,7 @@ Plug 'idbrii/vim-notgrep'   "ack in vim
 Plug 'derekwyatt/vim-scala' "Scala
 Plug 'leafgarland/typescript-vim' "Typescript
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'sheerun/vim-polyglot'  "highlighting for some files (Jenkinsfiles)
 
 
 call plug#end()
@@ -41,7 +43,7 @@ set expandtab
 set nu
 set colorcolumn=90
 
-set foldmethod=syntax "fold curly braces
+"set foldmethod=syntax "fold curly braces
 "For the transparent background
 "hi Normal ctermbg=none
 "highlight NonText ctermbg=none
@@ -52,8 +54,8 @@ au Filetype * let &l:shiftwidth = s:tabwidth
 au Filetype * let &l:softtabstop = s:tabwidth
 au Filetype * set expandtab
 ""For copying to the clipboard
-noremap <C-c> "+y
-noremap <C-v> "+p
+"noremap <C-c> "+y
+"noremap <C-v> "+p
 set clipboard=unnamedplus
 """For incremental searching and highlighting
 set incsearch
@@ -112,11 +114,22 @@ syntax enable
 "let g:solarized_termtrans = 1  "Allows transparent terminal
 set background=dark
 colorscheme solarized
-""""For SympylFold
+"""Folding
 nnoremap , za
-let g:SimpylFold_docstring_preview = 1  "See the first line of the fold
-let g:SimpylFold_fold_docstring = 0     "Do not fold docstrings (in functions for example
-let g:SimpylFold_fold_import = 0
+nnoremap < zA
+nnoremap f zA
+
+""""SympylFold
+"let g:SimpylFold_docstring_preview = 1  "See the first line of the fold
+"let g:SimpylFold_fold_docstring = 0     "Do not fold docstrings (in functions for example
+"let g:SimpylFold_fold_import = 0
+""""anyfold
+filetype plugin indent on " required
+syntax on                 " required
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+set foldlevel=0  " close all folds
+let g:anyfold_fold_toplevel=0
+let g:anyfold_fold_identify_comments=2
 ""For airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1

@@ -1,4 +1,5 @@
 [global_config]
+  scroll_tabbar = True
   always_split_with_profile = True
 [keybindings]
   new_tab = <Alt>t
@@ -19,11 +20,10 @@
   next_profile = <Alt>p
 [profiles]
   [[default]]
-    allow_bold = False
     icon_bell = False
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = Monospace 11
+    font = Monospace Bold 13
     foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden

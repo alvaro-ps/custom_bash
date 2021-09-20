@@ -14,7 +14,7 @@ Plug 'scrooloose/syntastic' "code syntaxis
 Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
 Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
 Plug 'altercation/vim-colors-solarized' "Color scheme
-"Plug 'tmhedberg/SimpylFold' "Python folding
+" Plug 'tmhedberg/SimpylFold' "Python folding
 Plug 'pseewald/vim-anyfold' "code folding
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -42,6 +42,7 @@ set autoindent
 set expandtab
 set nu
 set colorcolumn=90
+set backupcopy=yes
 
 "set foldmethod=syntax "fold curly braces
 "For the transparent background
@@ -67,7 +68,7 @@ set hidden
 """For NERDTree
 nnoremap <C-n> :NERDTreeToggle<return>
 ""coc autocompletion
-let g:coc_global_extensions = ['coc-python', 'coc-metals']
+let g:coc_global_extensions = ['coc-pyright', 'coc-metals']
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -117,18 +118,18 @@ colorscheme solarized
 """Folding
 nnoremap , za
 nnoremap < zA
-nnoremap f zA
 
 """"SympylFold
-"let g:SimpylFold_docstring_preview = 1  "See the first line of the fold
-"let g:SimpylFold_fold_docstring = 0     "Do not fold docstrings (in functions for example
-"let g:SimpylFold_fold_import = 0
+let g:SimpylFold_docstring_preview = 1  "See the first line of the fold
+let g:SimpylFold_fold_docstring = 0     "Do not fold docstrings (in functions for example
+let g:SimpylFold_fold_import = 0
 """"anyfold
 filetype plugin indent on " required
 syntax on                 " required
 autocmd Filetype * AnyFoldActivate               " activate for all filetypes
 set foldlevel=0  " close all folds
 let g:anyfold_fold_toplevel=0
+let g:anyfold_fold_comments=0
 let g:anyfold_fold_identify_comments=2
 ""For airline
 set laststatus=2

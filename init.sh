@@ -22,3 +22,7 @@ replace() {
     echo "Done!"
 }
 
+
+
+export JAVA_PATH=/usr/bin/java
+export PATH=$JAVA_PATH:$PATH

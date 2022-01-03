@@ -252,7 +252,7 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "google-chrome" 
+bindsym $mod+w exec "firefox" 
 # "/usr/bin/firefox"
 bindsym $mod+n exec "nautilus"
 bindsym $mod+m exec "spotify"

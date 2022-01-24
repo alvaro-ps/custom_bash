@@ -1,0 +1,4 @@
+- Get `hummingbird.ovpn` file.
+- Make sure `openvpn` service exists and it's up and running (`systemctl status openvpn`)
+- Move hummingbird.ovpn to /etc/openvpn/hummingbird.conf
+- sudo systemctl enable openvpn@hummingbird.service

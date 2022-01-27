@@ -64,6 +64,9 @@ set hlsearch
 """For switching to another buffer without saving
 set hidden
 
+"""Do not expandtab for makefiles!
+autocmd FileType make setlocal noexpandtab
+
 """"PLUGINS""""
 """For NERDTree
 nnoremap <C-n> :NERDTreeToggle<return>

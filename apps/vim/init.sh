@@ -1,6 +1,8 @@
 basepath=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 # hard link to the custom vimrc file
 ln -f $basepath"/vimrc" ~/.vimrc
+# hard link of coc-setting.json
+ln -f $basepath"/coc-settings.json" ~/.vim/coc-settings.json
 
 vck () {
     # open files that match the given regex

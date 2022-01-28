@@ -36,27 +36,17 @@ vnoremap jj <esc>
 nnoremap z :bnext<return>
 nnoremap Z :bprevious<return>
 nnoremap <C-z> :bdelete<return>
-set tabstop=4
-set shiftwidth=4
-set autoindent
+set tabstop=2
+set shiftwidth=2
 set expandtab
+set autoindent
 set nu
 set colorcolumn=90
 set backupcopy=yes
 
-"set foldmethod=syntax "fold curly braces
-"For the transparent background
-"hi Normal ctermbg=none
-"highlight NonText ctermbg=none
-""Set the tab width (jedi screws it up)
-let s:tabwidth=4
-au Filetype * let &l:tabstop = s:tabwidth
-au Filetype * let &l:shiftwidth = s:tabwidth
-au Filetype * let &l:softtabstop = s:tabwidth
-au Filetype * set expandtab
 ""For copying to the clipboard
-"noremap <C-c> "+y
-"noremap <C-v> "+p
+noremap <C-c> "+y
+noremap <C-v> "+p
 set clipboard=unnamedplus
 """For incremental searching and highlighting
 set incsearch
@@ -66,6 +56,12 @@ set hidden
 
 """Do not expandtab for makefiles!
 autocmd FileType make setlocal noexpandtab
+"""Handle tab spacing in python
+augroup python_files
+    autocmd!
+    autocmd FileType python set tabstop=4
+    autocmd FileType python set shiftwidth=4
+augroup END
 
 """"PLUGINS""""
 """For NERDTree

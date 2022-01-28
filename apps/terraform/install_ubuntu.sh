@@ -11,3 +11,9 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 
 sudo apt-get update
 sudo apt-get install -y terraform terraform-ls
+
+
+## tfenv (https://github.com/tfutils/tfenv)
+
+git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+sudo ln -s ~/.tfenv/bin/* /usr/local/bin

@@ -18,3 +18,5 @@ vpn_toggle() {
         vpn_on
     fi
 }
+
+export VAULT_ADDR=https://vault.infra.hummingbird-tech.io:8200

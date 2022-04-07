@@ -9,7 +9,11 @@ vck () {
     REGEX="$1"
     DIRECTORY=$2
 
-    FILES_MATCHING_REGEX=$(ack -l "$REGEX" $DIRECTORY)
+    # remove arguments from the list of arguments, so that we can pass them to ack
+    [ -n "$REGEX" ] && shift
+    [ -n "$DIRECTORY" ] && shift
+
+    FILES_MATCHING_REGEX=$(ack -l "$REGEX" $DIRECTORY $@)
     if [ -z "$FILES_MATCHING_REGEX" ]; then
         echo "No files matching '"$REGEX"'"
         return

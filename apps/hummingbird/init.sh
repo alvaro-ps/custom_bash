@@ -20,3 +20,7 @@ vpn_toggle() {
 }
 
 export VAULT_ADDR=https://vault.infra.hummingbird-tech.io:8200
+
+
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

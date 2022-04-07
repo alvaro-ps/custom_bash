@@ -1,2 +1,2 @@
 sudo snap install tree
-sudo apt install shellcheck ack-grep
+sudo apt install shellcheck ack-grep bash-completion

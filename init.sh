@@ -22,7 +22,9 @@ replace() {
     echo "Done!"
 }
 
-
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 export JAVA_PATH=/usr/bin/java
 export PATH=$JAVA_PATH:$PATH

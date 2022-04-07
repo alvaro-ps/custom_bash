@@ -5,7 +5,8 @@ sudo apt-get update
 # synapse is the launcher
 # nitrogen to set backgrounds
 # playerctl to play/pause with keyboard
-sudo apt install -y i3-gaps i3status i3blocks synapse nitrogen playerctl
+# lxappearance for themes
+sudo apt install -y i3-gaps i3status i3blocks synapse nitrogen playerctl lxappearance
 # install scripts for i3blocks (temperature, calendar, ...)
 rm -rf ~/.config/i3blocks/
 git clone https://github.com/vivien/i3blocks-contrib ~/.config/i3blocks/scripts/

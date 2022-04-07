@@ -26,6 +26,7 @@ Plug 'derekwyatt/vim-scala' "Scala
 Plug 'leafgarland/typescript-vim' "Typescript
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'  "highlighting for some files (Jenkinsfiles)
+Plug 'psf/black', { 'branch': 'stable' }  "python black
 
 
 call plug#end()
@@ -140,3 +141,6 @@ let g:vim_json_syntax_conceal = 0
 """ grep the contents of the clipboard
 nnoremap <silent> <Leader>f :NotGrep <C-R>"<return>
 nnoremap <Leader>fi :NotGrep -i
+""" For black
+autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 100

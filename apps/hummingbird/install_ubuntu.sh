@@ -18,3 +18,6 @@ sudo snap install circleci
 # After installing krew, install kubectx, kubens
 kubectl krew install ctx
 kubectl krew install ns
+
+# k9s
+sudo snap install k9s

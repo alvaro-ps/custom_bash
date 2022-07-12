@@ -43,3 +43,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # kubectl tab-completion (see bash-completion in main ./install_ubuntu.sh)
 source <(kubectl completion bash)
 complete -F __start_kubectl k
+
+# k9s
+alias kdash="k9s --kubeconfig ~/.kube/config"

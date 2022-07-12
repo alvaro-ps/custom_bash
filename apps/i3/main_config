@@ -96,9 +96,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "01 "
-set $workspace2 "02  "
+set $workspace2 "02   Code"
 set $workspace3 "03  "
-set $workspace4 "04  "
+set $workspace4 "04   Docs"
 set $workspace6 "06  "
 set $workspace7 "7 "
 set $workspace8 "08 "

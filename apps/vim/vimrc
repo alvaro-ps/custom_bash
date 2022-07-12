@@ -68,7 +68,7 @@ augroup END
 """For NERDTree
 nnoremap <C-n> :NERDTreeToggle<return>
 ""coc autocompletion
-let g:coc_global_extensions = ['coc-pyright', 'coc-metals', 'coc-sh']
+let g:coc_global_extensions = ['coc-pyright', 'coc-metals', 'coc-sh', 'coc-docker']
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -144,3 +144,5 @@ nnoremap <Leader>fi :NotGrep -i
 """ For black
 autocmd BufWritePre *.py execute ':Black'
 let g:black_linelength = 100
+""" For Ctrl-P
+let g:ctrlp_show_hidden = 1

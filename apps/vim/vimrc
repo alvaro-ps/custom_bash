@@ -68,7 +68,7 @@ augroup END
 """For NERDTree
 nnoremap <C-n> :NERDTreeToggle<return>
 ""coc autocompletion
-let g:coc_global_extensions = ['coc-pyright', 'coc-metals', 'coc-sh', 'coc-docker']
+let g:coc_global_extensions = ['coc-pyright', 'coc-metals', 'coc-sh']
 
 function! s:check_back_space() abort
   let col = col('.') - 1
